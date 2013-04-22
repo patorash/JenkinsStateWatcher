@@ -1,0 +1,3 @@
+checkJenkinsState();
+setIntervalCheckState();
+setBrowserActionOnClickTrigger();

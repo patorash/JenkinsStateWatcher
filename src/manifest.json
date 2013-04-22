@@ -1,0 +1,21 @@
+{
+    "name": "Jenkins State Watcher",
+    "version": "0.1",
+    "manifest_version": 2,
+    "description": "執事が働いているか見張る。",
+
+    "permissions": [
+        "http://rh0280.local:8080/"
+    ],
+
+    "background": {
+        "scripts":["common.js", "background.js"]
+    },
+
+    "options_page": "options.html",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Jenkins State Watcher"
+    }
+}
