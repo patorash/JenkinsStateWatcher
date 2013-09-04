@@ -1,4 +1,4 @@
-names = ['jenkins_url', 'interval_minutes'];
+names = ['jenkins_url', 'interval_minutes', 'username', 'api_token'];
 
 document.getElementById('save').onclick = function() {
     for(var i = 0, len = names.length; i < len; i++) {

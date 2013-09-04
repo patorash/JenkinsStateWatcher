@@ -2,6 +2,9 @@ function checkJenkinsState() {
     if (localStorage['jenkins_url'] != undefined) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', localStorage['jenkins_url'] + '/api/json', true);
+        if (localStorage['username'] != undefined && localStorage['api_token'] != undefined) {
+            xhr.setRequestHeader('Authorization', 'Basic ' + btoa(localStorage['username'] + ':' + localStorage['api_token']));
+        }
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4) {
                 var response = JSON.parse(xhr.responseText);
@@ -31,8 +34,7 @@ setIntervalCheckState = function() {
     } else {
         interval_minutes = 1;
     }
-    var timerId = setInterval(checkJenkinsState, interval_minutes*60*1000);
-    localStorage['timerId'] = timerId;
+    localStorage['timerId'] = setInterval(checkJenkinsState, interval_minutes*60*1000);
 };
 
 clearIntervalTimer = function(){
