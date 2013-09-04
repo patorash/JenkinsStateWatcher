@@ -21,4 +21,5 @@ Jenkinsが使用中かどうかを教えてくれます。
 * Jenkinsアイコンの上で右クリックして、オプションページを表示します。
 * JenkinsURLに、JenkinsのサイトのURLを入力します。(例: http://example.com:8080/jenkins/)
 * IntervalMinutesに、確認する間隔を分単位で入力します。
+* ユーザー登録している場合はユーザー名とApiトークンを入力します。
 * Saveボタンを押します。
